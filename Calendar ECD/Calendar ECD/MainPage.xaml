@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Calendar_ECD.MainPage">
+
+    <Grid BackgroundColor="#F3F5F9" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+        <Grid.RowDefinitions>
+           <RowDefinition Height="180"/>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid BackgroundColor="#455399" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Margin="0,-40,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label TextColor="White" FontSize="40" HorizontalTextAlignment="Center"
+                    <Label.FormattedText>
+                    <FormattedString.Spans>
+                        <Span Text=".NET" FontSize="40" FontAttributes="Bold"/>
+                        <Span Text="Conf"/>
+                    </FormattedString.Spans>
+                    </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            <Label Text="'Focusing on Xamarin'" TextColor="White" FontSize="15" HorizontalTextAlignment ="Center"
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+
+
+
+
+
+</ContentPage>
