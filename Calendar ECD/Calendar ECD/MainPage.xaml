@@ -8,11 +8,26 @@
 
     <Grid BackgroundColor="#F3F5F9" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
         <Grid.RowDefinitions>
-           <RowDefinition Height="180"/>
            <RowDefinition Height="Auto"/>
            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid BackgroundColor="#455399" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid Padding="30">
+            <Image Source="menu.png" HeightRequest="18" HorizontalOptions="Start"/>
+            <Image Source="search.png" HeightRequest="18" HorizontalOptions="End"/>
+         </Grid>
+        <CollectionView Grid.Row="1" Margin="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                        SelectionMode="None" ItemSource="{Binding MyEvents}">
+            <CollectionView.Header>
+                <Label Text="My Events" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
             <StackLayout Margin="0,-40,0,0" HorizontalOptions="Center" VerticalOptions="Center">
                 <Label TextColor="White" FontSize="40" HorizontalTextAlignment="Center"
                     <Label.FormattedText>
