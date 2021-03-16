@@ -8,17 +8,17 @@
 
     <Grid BackgroundColor="#F3F5F9" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
         <Grid.RowDefinitions>
-           <RowDefinition Height="Auto"/>
-           <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Padding="30">
             <Image Source="menu.png" HeightRequest="18" HorizontalOptions="Start"/>
             <Image Source="search.png" HeightRequest="18" HorizontalOptions="End"/>
-         </Grid>
+        </Grid>
         <CollectionView Grid.Row="1" Margin="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                         SelectionMode="None" ItemSource="{Binding MyEvents}">
             <CollectionView.Header>
-                <Label Text="My Events" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
+                <Label Text="Veri-Edu" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
             </CollectionView.Header>
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
@@ -32,20 +32,56 @@
                 <Label TextColor="White" FontSize="40" HorizontalTextAlignment="Center"
                     <Label.FormattedText>
                     <FormattedString.Spans>
-                        <Span Text=".NET" FontSize="40" FontAttributes="Bold"/>
-                        <Span Text="Conf"/>
+                        <Span Text="ECD" FontSize="40" FontAttributes="Bold"/>
+                        <Span Text="Calendar"/>
                     </FormattedString.Spans>
                     </FormattedString>
                     </Label.FormattedText>
                 </Label>
-            <Label Text="'Focusing on Xamarin'" TextColor="White" FontSize="15" HorizontalTextAlignment ="Center"
+                <Label Text="'Veri-Edu'" TextColor="White" FontSize="15" HorizontalTextAlignment ="Center"
             </StackLayout>
-        </Grid>
-
     </Grid>
+    <pv:PancakeView Grid.Row="1" HasShadow="True" HeightRequest="80" Margin="0,-40,0,0"
+                     HorizontalOptions="Center">
+        </Grid ColumnSpacing="0" HorizontalOptions="FillAndExpander">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <BoxView Grid.RowSpan="2" WidthRequest="80" BackgroundColour="#00C6AE"/>
+        <BoxView Grid.Column="1" Grid.RowSpan="2" WidthRequest="80" BackgroundColor="White"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="23" TextColor="#455399" FontSize="36" HorizontalOptions="Center"/>
+            <Label Text="March" TextColor="#455399" Fontsize="12" HorizontalOptions="Center" Margin="0,-0,0"/>
+        </StackLayout>
+        <BoxView Grid.Row="1" Grid.ColumnSpan="2" WidthRequest="73" HeightRequest="1" BackgroundColor="#F1F3F7" HorizonOptions="Center" VerticalOptions="Center"/>
+        <pv:PancakeView Grid.Row="1" HeightRequest="7" WidthRequest="7" BorderThickness="2"
+                        BorderColor="#F1F3F7" CornerRadius="3.5" HorizontalOptions="Center"
+                        VerticalOptions="Center" Margin="7"/>
+        <pv:PancakeView Grid.Row="1" Grid.Column="1" HeightRequest="7" WidthRequest="7" BorderThickness="2"
+                        BorderColor="#C9D6EF" CornerRadius="3.5" HorizontalOptions="Center"
+                        BackgroundColor="#C9D6EF" VerticalOptions="Center" Margin="7"/>
+    </Grid>
+    </pv:PancakeView>
+    <CollectionView Grid.Row="2" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                    SelectionMode="None" ItemsSource="{Binding MyAgenda}">
+        </CollectionView.Header>
+             <Label Text="Agenda" TextColor="Black" FontSize="18"/>
+        </CollectionView.Header>
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
+        <CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <pv:PancakeView HasShadow="True"BackgroundColor="White" VerticalOptions="StartAndExpand"
+                                    HorizontalOptions="FillAndExpand">
+                </DataTemplate>    
+    </CollectionView.ItemTemplate>
+            </CollectionView>
+ </Grid>       
 
-
-
-
-
-</ContentPage>
+ </ContentPage>
